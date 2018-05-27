@@ -36,12 +36,15 @@ function doDangerousAction(fn) {
 }
 
 const identity = x => (y) => x !== undefined ? x : y;
-const compose = (...fns) => fns.reverse().reduce((prev, next) => value => next(prev(value)), value => value);
+const compose = (...fns) =>
+  fns
+  .reverse()
+  .reduce((prev, next) => value => next(prev(value)), value => value);
 
 fromNullable(10)
   .chain((x) => tryCatch(compose(doDangerousAction, identity(x))))
-.map(x => x * 3)
-.fold(
-  e => console.error("Error ! " + e.message),
-  s => console.log("Success : " + s)
-);
+  .map(x => x * 3)
+  .fold(
+    e => console.error("Error ! " + e.message),
+    s => console.log("Success : " + s)
+  );
