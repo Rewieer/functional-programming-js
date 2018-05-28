@@ -103,6 +103,20 @@ the URL would be given way prior to the actual call to handle various environmen
 The second example is verbose and straight-forward : required arguments are passed before, so we don't need to take care of
 them. Moreover, it says what it's doing : it fetches the user. This is the main benefit of functional programming : 
 **it focuses on the result, not on how to get it**.
+
+### Currying
+
+A special case of Partial Application is called Currying. It consist of partially applying one argument at a time.
+Our fetch example would look like it :
+```js
+const myFetch = curry(fetch);
+myFetch("https://mywebsite.com")({ userId: 1 })(function() {
+  // Some logic with the user fetched
+})
+```
+
+Why would one do this ? It appears that functional programming really is efficient when we talk about functions
+expecting a single input (more about this later).  
 ## Standard Functions
 **Identity** : returns it's input as the output
 

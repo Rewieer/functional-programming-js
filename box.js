@@ -1,3 +1,4 @@
+// https://egghead.io/lessons/javascript-composable-error-handling-with-either
 const Box = x => ({
   map: fn => Box(fn(x)),
   fold: fn => fn(x),
