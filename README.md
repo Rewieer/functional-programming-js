@@ -123,3 +123,17 @@ expecting a single input (more about this later).
 **Unary** : Accepts only one argument.
 
 **Constant** : always return the same constant value
+
+## Reducing Side Effects
+
+**Side Effect** : operating on the outside world. A function that manipulate some
+external state of perform I/O is doing side effects. 
+The problem with them is that it's hard to reason about without viewing the implementation
+of the code.
+
+**Idempotence** : the characteristic of returning the same output given same input.
+
+**Purity** : a function is pure when it has no side effects.
+
+**Referential Transparency** : if we can replace a function call directly by it's output and
+see no difference in the program execution, we say the function has referental transparency.

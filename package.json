@@ -1,0 +1,12 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://rewieer@github.com/rewieer/functional-programming-js.git",
+  "author": "Benkhebbab Anthony <rewieer@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "folktale": "^2.1.0",
+    "ramda": "^0.25.0"
+  }
+}
